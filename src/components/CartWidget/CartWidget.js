@@ -1,12 +1,10 @@
+import './CartWidget.css';
 
-
-
-const CartWidget = (props) => {
-    
-    console.log(props.imagen);
+const CartWidget = () =>{
     return(
-        <div>
-            
+        <div className="CartWidget">
+            <img src="./imagenes/carritos.png" className="CartImg"/>
+            0
         </div>
     )
 }

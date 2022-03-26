@@ -10,12 +10,11 @@ function App() {
     
     return ( 
         <div className = "App">
+            
             <ItemListContainer greeting = {"Hola"}/>
+            
             <header className = "App-header">
-                
-                <NavBar/>
-                
-                
+                <NavBar/>  
             </header> 
         
         </div>

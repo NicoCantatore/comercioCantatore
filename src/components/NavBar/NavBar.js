@@ -1,4 +1,6 @@
+import CartWidget from '../CartWidget/CartWidget.js';
 import './Navbar.css'
+
 
 const NavBar = () => {
     return (
@@ -10,9 +12,13 @@ const NavBar = () => {
                 <li className ="button">libros ciencia ficcion</li>
             </ul>
 
+            <div>
+              <CartWidget/>
+            </div>
             
 
         </nav>
+        
     )
 }
 
