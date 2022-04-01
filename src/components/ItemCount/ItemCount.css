@@ -1,0 +1,40 @@
+.ButtonCount {
+    
+    color: white;
+    background: black;
+    border: 1px solid white;
+    border-radius: 6px;
+    
+    border: none;
+          color: white;
+          padding: 16px 10px;
+          text-align: center;
+         
+         
+         
+          
+          
+          font-size: 16px;
+          margin: 4px 2px;
+          -webkit-transition-duration: 0.4s; 
+          transition-duration: 0.4s;
+          cursor: pointer;
+          text-decoration: none;
+          text-transform: uppercase;
+    }
+    .ButtonCount {
+          background-color: black; 
+          color: white; 
+          border: 2px solid white;
+    }
+    
+    .ButtonCount:hover {
+          background-color: #272722;
+          color: white;
+     }
+
+     .containerB{
+           display: flex;
+           flex-wrap: wrap;
+           margin-left: 900px;
+     }
