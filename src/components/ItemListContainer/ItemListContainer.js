@@ -5,13 +5,14 @@ import { useState,useEffect } from "react";
 const ItemListContainer = (props) => {
     console.log(props) 
     console.log(props.greeting)
+    
+   
 
     const [products, setProducts] = useState([])
 
     useEffect(() => {
         getProducts().then( prods => {
             setProducts(prods)
-
 
         })
 
@@ -22,6 +23,7 @@ const ItemListContainer = (props) => {
             <h1>{props.greeting}</h1>
             
             <Itemlist products={products}/>
+           
             
             
         </div>

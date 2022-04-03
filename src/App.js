@@ -7,10 +7,8 @@ import ItemCount from './components/ItemCount/ItemCount';
 
 
 
-
-
 function App() {
- 
+    
     
     return ( 
         <div className = "App">
@@ -22,10 +20,8 @@ function App() {
 
 
             <ItemListContainer greeting = {"Comercio"}/>
-            <ItemCount/>
+            <ItemCount stock={10} initial={1}/>
           
-
-           
 
         </div>
     );

@@ -1,31 +1,32 @@
 
 import { useState } from 'react' 
+import React from 'react'
 
 
 
-const ItemCount = () => {
+const ItemCount = ({stock, initial}) => {
     
-    const [count, setCount] = useState(1)
+    const [count, setCount] = useState(initial)
     
-
     const decrement = () =>{
-        console.log('decrement')
-        setCount (count - 1) 
-       
+        if(count > initial){
+            console.log('decrement')
+            setCount (count - 1) 
+        }
+           
     }
 
-
     const increment = () =>{
-        console.log('increment')
-        setCount (count + 1)
+        if(count < stock){
+            console.log('increment')
+            setCount (count +1) 
+        }
         
     }
 
     const agregarCarrito = () =>{
         console.log('agregar')
         
-       
-       
         
     }
 

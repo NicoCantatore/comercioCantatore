@@ -1,12 +1,6 @@
 
 
-.title{
-    text-align:center ;
-    font-size: 40px;
-    color: springgreen;
-    margin-top: 100px;
-    font-weight: 100;
-}
+
 
 .container{
     width: 100%;
@@ -35,12 +29,23 @@
     
 }
 
-.container .img{
-    width: 200px;
-    height: 220px;
+.card > img{
+    width: 16S0px;
+    height: 200px;
    
 }
 
-.section .p{
+.container > h3{
 size: 1em;
+padding: 10px 10px;
+}
+
+.container > p{
+    size: 50em;
+    padding: 10px 10px;
+}
+
+.container > button{
+    size: 2em;
+    padding: 10px 10px;
 }
