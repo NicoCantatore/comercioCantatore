@@ -23,7 +23,7 @@ const ItemListContainer = (props) => {
             <h1>{props.greeting}</h1>
             
             <Itemlist products={products}/>
-           
+             <p>Cargando...</p>
             
             
         </div>

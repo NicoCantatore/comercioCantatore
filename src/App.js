@@ -9,6 +9,9 @@ import ItemCount from './components/ItemCount/ItemCount';
 
 function App() {
     
+    const handleOnAdd = (quantify) =>{
+        console.log("Se agregaron al carrito: ",quantify)
+    }
     
     return ( 
         <div className = "App">
@@ -20,7 +23,7 @@ function App() {
 
 
             <ItemListContainer greeting = {"Comercio"}/>
-            <ItemCount stock={10} initial={1}/>
+            <ItemCount stock={10} initial={1} onAdd={handleOnAdd}/>
           
 
         </div>
