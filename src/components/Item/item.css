@@ -30,10 +30,17 @@
 }
 
 .card > img{
-    width: 16S0px;
+    width: 160px;
     height: 200px;
    
 }
+
+/*.card > img{
+    width: 16S0px;
+    height: 200px;
+   
+}*/
+
 
 .container > h3{
 size: 1em;

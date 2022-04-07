@@ -10,6 +10,8 @@ const ItemListContainer = (props) => {
 
     const [products, setProducts] = useState([])
 
+  
+    
     useEffect(() => {
         getProducts().then( prods => {
             setProducts(prods)
@@ -23,7 +25,7 @@ const ItemListContainer = (props) => {
             <h1>{props.greeting}</h1>
             
             <Itemlist products={products}/>
-             <p>Cargando...</p>
+            
             
             
         </div>
@@ -32,3 +34,7 @@ const ItemListContainer = (props) => {
 }
 
 export default ItemListContainer;
+
+//mio
+//<Itemlist products={products}/>
+//             <p>Cargando...</p>
