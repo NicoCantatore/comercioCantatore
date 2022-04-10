@@ -1,15 +1,36 @@
 import CartWidget from '../CartWidget/CartWidget.js';
 import './Navbar.css'
+import { Link, NavLink} from 'react-router-dom'
+import { useState, useEffect } from 'react';
+
+import { getCategories } from '../AsyncMock/AsyncMock'
 
 
 const NavBar = () => {
+    const [categories, setCategories] = useState([])
+
+    useEffect(() => {
+      getCategories().then(categories => {
+        setCategories(categories)
+      })
+    }, [])
+
+    //ver link en marca
+    
     return (
         <nav>
+               
+              
+            
+            <Link to='/'><h2>Marca</h2></Link>
+                
+                
+            
             
             <ul className="menu">
-                <li className ="button">libros accion</li>
-                <li className ="button">libros terror</li>
-                <li className ="button">libros ciencia ficcion</li>
+                <Link to='/list' className ="button">libros</Link>
+               
+                
             </ul>
 
             <div>

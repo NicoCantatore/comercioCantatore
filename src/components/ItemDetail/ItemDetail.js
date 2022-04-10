@@ -1,4 +1,6 @@
-const ItemDetail= ({id, name, img, price}) => {
+
+
+const ItemDetail= ({id, name, img, category, description, price }) => {
     
     return(
         <section className="container">
@@ -6,13 +8,27 @@ const ItemDetail= ({id, name, img, price}) => {
                 <img src={img} alt={name}/>
             </picture><br></br>
             <h3>{name}</h3>
-            <p>{price}</p>
+            <section>
+                <p className="Info">
+                    Categoria: {category}
+                </p>
+                <p className="Info">
+                    Descripción: {description}
+                </p>
+                <p className="Info">
+                    Precio: {price}
+                </p>
+            </section>
             
         </section>
     )
 }
 
 export default ItemDetail;
+
+
+
+
 
 
 // mi archivo

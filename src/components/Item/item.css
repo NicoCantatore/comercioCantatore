@@ -5,7 +5,6 @@
 .container{
     width: 100%;
     max-width: 200px;
-    height: 100px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -21,6 +20,7 @@
     margin: 20px;
     text-align: center;
     transition: all 0.25s;
+    
 }
 
 .container .card:hover{
