@@ -7,7 +7,125 @@ nav {
     float: left;
 }
 
-.menu {
+.NavBar {
+    display: flex;
+    background: transparent;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    background: wheat;
+  }
+  
+  .menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .Option {
+   
+    text-decoration: none;
+    border-radius: 25;
+    margin: 0 50px;
+    /* TODO */
+    width: auto;
+    padding: 12px;
+    background: grey;
+    border-radius: 8px;
+    flex: none;
+    align-self: center;
+    flex-grow: 0;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    border: none;
+    border-style: none;
+    cursor: pointer;
+    outline: inherit;
+  }
+  
+  .Option:hover {
+    background-color: grey;
+    padding: 5px;
+}
+
+  .ActiveOption {
+        
+        text-decoration: none;
+        border-radius: 25;
+        margin: 0 50px;
+        /* TODO */
+        width: auto;
+        padding: 12px;
+        background: grey;
+        border-radius: 8px;
+        flex: none;
+        align-self: center;
+        flex-grow: 0;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: black;
+        border: none;
+        border-style: none;
+        cursor: pointer;
+        outline: inherit;
+    }
+
+    .ActiveOption:hover {
+        background-color: grey;
+        padding: 5px;
+    }
+  
+
+    .OptionB {
+   
+        text-decoration: none;
+        border-radius: 25;
+        margin: 0 50px;
+        /* TODO */
+        width: auto;
+        padding: 10px;
+        background: black;
+        border-radius: 6px;
+        flex: none;
+        align-self: center;
+        flex-grow: 0;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: white;
+        border: none;
+        border-style: none;
+        cursor: pointer;
+        outline: inherit;
+    }
+
+    .ActiveOptionB {
+        
+        text-decoration: none;
+        border-radius: 25;
+        margin: 0 50px;
+        /* TODO */
+        width: auto;
+        padding: 12px;
+        background: black;
+        border-radius: 8px;
+        flex: none;
+        align-self: center;
+        flex-grow: 0;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: white;
+        border: none;
+        border-style: none;
+        cursor: pointer;
+        outline: inherit;
+    }
+
+/*.menu .NavLink {
     margin: 0;
     padding: 8px;
     ;
@@ -17,9 +135,9 @@ nav {
     
 
   
-}
+}*/
 
-.menu li {
+/*.menu li {
     display: block;
 }
 
@@ -39,5 +157,5 @@ nav {
     background-color: grey;
     padding: 5px;
     
-}
+}*/
 

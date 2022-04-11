@@ -1,13 +1,12 @@
 import CartWidget from '../CartWidget/CartWidget.js';
 import './Navbar.css'
 import { Link, NavLink} from 'react-router-dom'
-import { useState, useEffect } from 'react';
-
-import { getCategories } from '../AsyncMock/AsyncMock'
+//import { useState, useEffect } from 'react';
+//import { getCategories } from '../AsyncMock/AsyncMock'
 
 
 const NavBar = () => {
-    const [categories, setCategories] = useState([])
+    /*const [categories, setCategories] = useState([])
 
     useEffect(() => {
       getCategories().then(categories => {
@@ -15,7 +14,7 @@ const NavBar = () => {
       })
     }, [])
 
-    //ver link en marca
+    //ver link en marca*/
     
     return (
         <nav>
@@ -28,8 +27,8 @@ const NavBar = () => {
             
             
             <ul className="menu">
-                <Link to='/list' className ="button">libros</Link>
-               
+                
+                <NavLink to='/list' className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>List</NavLink>
                 
             </ul>
 

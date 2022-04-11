@@ -3,21 +3,21 @@
 const ItemDetail= ({id, name, img, category, description, price }) => {
     
     return(
-        <section className="container">
-            <picture className="card">
+        <section className="containerC">
+            <picture className="cardC">
                 <img src={img} alt={name}/>
             </picture><br></br>
-            <h3>{name}</h3>
+            
             <section>
-                <p className="Info">
+                <h1 className="InfoC">
                     Categoria: {category}
-                </p>
-                <p className="Info">
+                </h1>
+                <h1 className="InfoC">
                     Descripción: {description}
-                </p>
-                <p className="Info">
+                </h1>
+                <h1 className="InfoC">
                     Precio: {price}
-                </p>
+                </h1>
             </section>
             
         </section>

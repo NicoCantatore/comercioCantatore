@@ -44,15 +44,63 @@
 
 .container > h3{
 size: 1em;
+margin-left: 30px;
 padding: 10px 10px;
 }
 
 .container > p{
-    size: 50em;
+    display: block;
+    justify-content: center;
+    justify-items: center;
+    
+    margin-left: 40px;
     padding: 10px 10px;
 }
 
-.container > button{
-    size: 2em;
-    padding: 10px 10px;
+
+
+
+
+/* card c*/
+
+.containerC{
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+
+
+.containerC .cardC{
+    width: 500px;
+    height: 600px;
+    border-radius:8px ;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    
+    margin: 0px;
+    padding: 50px;
+    text-align: center;
+    transition: all 0.25s;
+    
+}
+
+.cardC > img{
+    width: 400px;
+    height: 600px;
+   
+}
+
+/*.card > img{
+    width: 16S0px;
+    height: 200px;
+   
+}*/
+
+
+.h1 .infoC{
+size: 2em;
+padding: 10px 10px;
 }

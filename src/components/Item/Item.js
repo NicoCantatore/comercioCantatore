@@ -1,5 +1,5 @@
 import './item.css';
-import { Link } from 'react-router-dom';
+import {  NavLink } from 'react-router-dom';
 
 const Item= ({id, name, img, price}) => {
     
@@ -7,10 +7,11 @@ const Item= ({id, name, img, price}) => {
         <section className="container">
             <picture className="card">
                 <img src={img} alt={name}/>
-            </picture><br></br>
+            </picture>
             <h3>{name}</h3>
             <p>precio {price}</p>
-            <Link to={`/detail/${id}`}>Ver detalle</Link>
+            
+            <NavLink to={`/detail/${id}`} className={({ isActive }) => isActive ? 'ActiveOptionB' : 'OptionB'}>Ver detalle</NavLink>
         </section>
     )
 }
