@@ -104,3 +104,16 @@ padding: 10px 10px;
 size: 2em;
 padding: 10px 10px;
 }
+
+/* footer c*/
+
+.ContainerC .FooterC{
+    display: flex;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    
+  
+    margin: auto;
+
+}

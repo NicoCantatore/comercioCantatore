@@ -1,7 +1,13 @@
-
+import '../ItemCount/ItemCount.css';
+import ItemCount from '../ItemCount/ItemCount';
 
 const ItemDetail= ({id, name, img, category, description, price }) => {
     
+    const handleOnAdd = (quantify) =>{
+        console.log("Se agregaron al carrito: ",quantify)
+    }
+  
+
     return(
         <section className="containerC">
             <picture className="cardC">
@@ -18,11 +24,18 @@ const ItemDetail= ({id, name, img, category, description, price }) => {
                 <h1 className="InfoC">
                     Precio: {price}
                 </h1>
+                
             </section>
+
+            <footer className='FooterC'>
+                    <ItemCount stock={10} initial={1} onAdd={handleOnAdd}/>
+                </footer>
             
         </section>
     )
 }
+
+
 
 export default ItemDetail;
 
