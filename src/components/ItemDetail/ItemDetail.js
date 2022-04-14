@@ -1,11 +1,52 @@
 import '../ItemCount/ItemCount.css';
-import ItemCount from '../ItemCount/ItemCount';
+//import ItemCount from '../ItemCount/ItemCount';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-const ItemDetail= ({id, name, img, category, description, price }) => {
-    
-    const handleOnAdd = (quantify) =>{
-        console.log("Se agregaron al carrito: ",quantify)
+
+const ButtonCount = ({ onConfirm,  initial = 0 }) => {
+    const [count, setCount] = useState(initial)
+
+    const increment = () => {
+
+            setCount(count + 1)
+
     }
+
+    const decrement = () => {
+            setCount(count - 1)
+
+    }
+
+    return (
+        <div>
+            <p>{count}</p>
+            <button onClick={decrement}>-</button>
+            <button onClick={increment}>+</button>
+            <button onClick={() => onConfirm(count)}>Agregar al carrito</button>
+            
+        </div>
+    )
+}
+
+
+
+
+
+const ItemDetail= ({id, name, img, category, description, price, stock }) => {
+    //const [typeInput ,setTypeInput] = useState (true)
+
+ 
+
+    const [quantity ,setQuantity] = useState (0)
+    
+ 
+    const handleAdd = (count) =>{
+        console.log("Se agregaron al carrito: ",quantity)
+        setQuantity(count)
+        
+    }
+
   
 
     return(
@@ -28,8 +69,14 @@ const ItemDetail= ({id, name, img, category, description, price }) => {
             </section>
 
             <footer className='FooterC'>
-                    <ItemCount stock={10} initial={1} onAdd={handleOnAdd}/>
-                </footer>
+                
+                    {quantity > 0 ? <Link to = '/cart'> ir al carrito</Link> : <ButtonCount onConfirm={handleAdd} stock={stock}></ButtonCount>}
+                  
+
+
+            
+            
+            </footer>
             
         </section>
     )
@@ -40,25 +87,3 @@ const ItemDetail= ({id, name, img, category, description, price }) => {
 export default ItemDetail;
 
 
-
-
-
-
-// mi archivo
-
-/*
-const items= ({title, id, price}) => {
-    
-    return(
-        <section className="container">
-            <picture className="card">
-                <h2>{id} alt={title}</h2>
-            </picture><br></br>
-            <h3>{title}</h3>
-            <p>{price}</p>
-            
-        </section>
-    )
-}
-
-export default items;*/
