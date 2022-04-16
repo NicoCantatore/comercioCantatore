@@ -1,35 +1,7 @@
 import '../ItemCount/ItemCount.css';
-//import ItemCount from '../ItemCount/ItemCount';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-
-
-const ButtonCount = ({ onConfirm,  initial = 0 }) => {
-    const [count, setCount] = useState(initial)
-
-    const increment = () => {
-
-            setCount(count + 1)
-
-    }
-
-    const decrement = () => {
-            setCount(count - 1)
-
-    }
-
-    return (
-        <div>
-            <p>{count}</p>
-            <button onClick={decrement}>-</button>
-            <button onClick={increment}>+</button>
-            <button onClick={() => onConfirm(count)}>Agregar al carrito</button>
-            
-        </div>
-    )
-}
-
-
+import ItemCount from '../ItemCount/ItemCount';
 
 
 
@@ -70,7 +42,7 @@ const ItemDetail= ({id, name, img, category, description, price, stock }) => {
 
             <footer className='FooterC'>
                 
-                    {quantity > 0 ? <Link to = '/cart'> ir al carrito</Link> : <ButtonCount onConfirm={handleAdd} stock={stock}></ButtonCount>}
+                    {quantity > 0 ? <Link to = '/cart'> ir al carrito</Link> : <ItemCount onAdd={handleAdd} stock={stock}></ItemCount>}
                   
 
 
