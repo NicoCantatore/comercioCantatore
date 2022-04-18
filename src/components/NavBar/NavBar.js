@@ -6,15 +6,14 @@ import { Link, NavLink} from 'react-router-dom'
 
 
 const NavBar = () => {
+  
     /*const [categories, setCategories] = useState([])
 
     useEffect(() => {
       getCategories().then(categories => {
         setCategories(categories)
       })
-    }, [])
-
-    //ver link en marca*/
+    }, [])*/
     
     return (
         <nav>

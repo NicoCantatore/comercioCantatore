@@ -27,33 +27,3 @@ const ItemListContainer = (props) => {
 
 export default ItemListContainer;
 
-/*const ItemListContainer = (props) => {
-    
-    const [products, setProducts] = useState([])
-
-    useEffect(() => {
-        getProducts().then( prods => {
-            setProducts(prods)
-
-        })
-
-    },[])
-
-    return(
-        <div>
-            <h1>{props.greeting}</h1>
-            
-            <Itemlist products={products}/>
-            
-            
-            
-        </div>
-       
-    )
-}
-
-export default ItemListContainer;*/
-
-//mio
-//<Itemlist products={products}/>
-//             <p>Cargando...</p>
