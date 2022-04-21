@@ -1,0 +1,38 @@
+.cartNot{
+ background-color: white;
+ margin: auto;
+ padding: 15px;
+
+   
+    
+}
+
+.cartNot .Not{
+    background-color: yellow;
+    width: 500px;
+    border-radius:8px ;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 100px 500px;
+    text-align: center;
+    transition: all 0.25s;
+    display: inline-block;
+    justify-content: space-evenly;
+ 
+    
+}
+
+.cartNot ul li {
+    display:flex;
+    justify-items: auto;
+    padding: 10px;
+    margin: 20px;
+    list-style: none;
+    size: 10px ;
+ 
+    
+}
+
+
+
+ 

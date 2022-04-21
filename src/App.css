@@ -37,3 +37,11 @@
     transform: rotate(360deg);
   }
 }
+.cartNot{
+  background-color: black;
+  margin: auto;
+  padding: 15px;
+  width: auto;   
+ 
+     
+ }
