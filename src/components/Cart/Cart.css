@@ -23,7 +23,7 @@
 }
 
 .cartNot ul li {
-    display:flex;
+    
     justify-items: auto;
     padding: 10px;
     margin: 20px;

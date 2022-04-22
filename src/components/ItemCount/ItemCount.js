@@ -4,20 +4,16 @@ import React from 'react'
 
 
 
-const ItemCount = ({stock, initial=0, onAdd}) => {
+const ItemCount = ({stock, initial=1, onAdd}) => {
     
     const [count, setCount] = useState(initial)
     
     const decrement = () =>{
-        //if(count > initial){
-           // console.log('decrement')
-            setCount (count - 1) 
+      setCount (count - 1) 
         }
 
     const increment = () =>{
-       // if(count < stock){
-          //  console.log('increment')
-            setCount (count +1) 
+        setCount (count +1) 
         }
 
     

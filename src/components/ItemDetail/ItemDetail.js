@@ -1,19 +1,17 @@
 import '../ItemCount/ItemCount.css';
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import ItemCount from '../ItemCount/ItemCount';
 import CartContext from '../Context/CartContext';
-
+import { useNotification } from '../Notification/Notification'
 
 
 const ItemDetail= ({id, name, img, category, description, price, stock }) => {
-    //const [typeInput ,setTypeInput] = useState (true)
+   
 
-    //const [quantity ,setQuantity] = useState (0)
+    const { addItem, getQuantityProd } = useContext(CartContext)
     
-    //const {cart, setCart} = useContext(CartContext)
-
-    const { addItem, isInCart } = useContext(CartContext)
+    const { setNotification } = useNotification()
  
     const handleAdd = (count) =>{
        
@@ -22,6 +20,7 @@ const ItemDetail= ({id, name, img, category, description, price, stock }) => {
         }
 
         addItem(productObj)
+        setNotification('error', `Se agregaron ${count} ${name} correctamente`)
     }
 
   
@@ -47,8 +46,9 @@ const ItemDetail= ({id, name, img, category, description, price, stock }) => {
 
             <footer className='FooterC'>
                 
-                    {isInCart(id) ? <Link to = '/cart'> ir al carrito</Link> : <ItemCount onAdd={handleAdd} stock={stock}></ItemCount>}
-                  
+                    {false ? <Link to = '/cart'> ir al carrito</Link> : <ItemCount onAdd={handleAdd} stock={stock} initial={getQuantityProd(id)} ></ItemCount>}
+                    
+                    
             </footer>
             
         </section>
