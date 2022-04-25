@@ -33,6 +33,7 @@ export const CartContextProvider = ({ children }) => {
 
         return count
     }
+
     
     const isInCart = (id) => {
         return cart.some(prod => prod.id === id )
@@ -51,6 +52,17 @@ export const CartContextProvider = ({ children }) => {
         return cart.find(prod => prod.id === id)?.quantity
     }
 
+
+
+
+    const calcularTotal =() => {
+         
+       return cart.reduce((acum,prod)=>acum+(prod.quantity*prod.price),0);
+    }
+
+    console.log(calcularTotal())
+  
+    
     return(
         <CartContext.Provider value={{
             cart,
@@ -59,7 +71,8 @@ export const CartContextProvider = ({ children }) => {
             isInCart,
             clear,
             removeItem,
-            getQuantityProd
+            getQuantityProd,
+            calcularTotal
         }}>
             {children}
         </CartContext.Provider>

@@ -1,10 +1,10 @@
 import {useContext} from "react"
 import CartContext from "../Context/CartContext"
 import './Cart.css';
-import { Link } from 'react-router-dom';
+
 
 const Cart = () => {
-    const { cart, removeItem} = useContext(CartContext)
+    const { cart, removeItem, calcularTotal} = useContext(CartContext)
 
     if(cart.length === 0) {
         return(
@@ -13,15 +13,18 @@ const Cart = () => {
     }
 
     return (
-        <div className="cartNot" >
-        <h1>Cart</h1>
+
         
+        <div className="cartNot" >
+        <h1>Cart </h1>
+        <div > </div>
+        
+
         <ul className="Not"> 
             {
-                cart.map(prod => <li key={prod.id}>{prod.name}   cantidad :  {prod.quantity} precio: {prod.price}   subtotal: {prod.quantity * prod.price}  <button onClick={() => removeItem(prod.id)}>  X </button></li>)
-                
-            } 
-             <Link to = '/cart'> Terminar</Link>   
+                cart.map(prod => <li key={prod.id}>{prod.name}   cantidad :  {prod.quantity} precio: {prod.price}   subtotal: {prod.quantity *prod.price} <button onClick={() => removeItem(prod.id)}>  X </button></li>)}
+                Total: {calcularTotal()} 
+          
         </ul>
         </div>
         
