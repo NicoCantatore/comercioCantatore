@@ -16,17 +16,17 @@ const Cart = () => {
 
         
         <div className="cartNot" >
-        <h1>Cart </h1>
+        <h1>Resumen de Compra </h1>
         <div > </div>
         
 
-        <ul className="Not"> 
+        <section className="Not"> 
             {
-                cart.map(prod => <li key={prod.id}>{prod.name}   cantidad :  {prod.quantity} precio: {prod.price}   subtotal: {prod.quantity *prod.price} <button onClick={() => removeItem(prod.id)}>  X </button></li>)}
-                Total: {calcularTotal()}<br></br>
+                cart.map(prod => <p className="textoCompra" key={prod.id}>{prod.name} <br></br> <br></br>  cantidad :  {prod.quantity}  precio: {prod.price}   subtotal: {prod.quantity *prod.price} <button className="removeIte" onClick={() => removeItem(prod.id)}> X </button></p>)}
+                <p className="textoTotall">Total: {calcularTotal()}<br></br></p>
                 <button className="ButtonCount" onClick={()=> clear()}>Vaciar carrito</button>
           
-        </ul>
+        </section>
         </div>
         
     )

@@ -54,7 +54,6 @@ export const CartContextProvider = ({ children }) => {
 
 
 
-
     const calcularTotal =() => {
          
        return cart.reduce((acum,prod)=>acum+(prod.quantity*prod.price),0);
