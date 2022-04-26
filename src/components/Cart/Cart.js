@@ -4,7 +4,7 @@ import './Cart.css';
 
 
 const Cart = () => {
-    const { cart, removeItem, calcularTotal} = useContext(CartContext)
+    const { cart, removeItem, calcularTotal,clear} = useContext(CartContext)
 
     if(cart.length === 0) {
         return(
@@ -23,7 +23,8 @@ const Cart = () => {
         <ul className="Not"> 
             {
                 cart.map(prod => <li key={prod.id}>{prod.name}   cantidad :  {prod.quantity} precio: {prod.price}   subtotal: {prod.quantity *prod.price} <button onClick={() => removeItem(prod.id)}>  X </button></li>)}
-                Total: {calcularTotal()} 
+                Total: {calcularTotal()}<br></br>
+                <button className="ButtonCount" onClick={()=> clear()}>Vaciar carrito</button>
           
         </ul>
         </div>
