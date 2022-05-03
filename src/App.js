@@ -7,7 +7,7 @@ import { BrowserRouter, Routes, Route} from 'react-router-dom'
 import { CartContextProvider } from './components/Context/CartContext';
 import Cart from './components/Cart/Cart';
 import {NotificationProvider} from './components/Notification/Notification'
-
+import Form from './components/Form/Form'
 
 function App() {
     
@@ -29,7 +29,7 @@ function App() {
                             <Route path='/list' element={<ItemListContainer />} />
                             <Route path='/detail/:productId' element={<ItemDetailContainer />} />
                             <Route path='/cart' element={<Cart />} />
-                            
+                            <Route path='/form' element={<Form />}/>
                             
 
                         </Routes>
