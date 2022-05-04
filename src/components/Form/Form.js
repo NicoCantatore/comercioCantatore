@@ -2,16 +2,19 @@ import CartContext from "../Context/CartContext"
 import { useContext, useState } from "react"
 import { getDocs, writeBatch, query, where, collection, documentId, addDoc } from 'firebase/firestore'
 import { firestoreDb } from '../service/firebase/index'
+import './Form.css';
 
 const Form = () => {
 
-    const [input, setInput] = useState('')
+    const [input, setInput] = useState({nombre: '', telefono: '', correo: '' })
+    
     const [loading, setLoading] = useState(false)
 
-    const { cart, totalCost } = useContext(CartContext)
+    const { cart, calcularTotal } = useContext(CartContext)
 
     const handleSubmit = (e) => {
         e.preventDefault()
+        console.log(input)
     }
 
     const handleChange = (event) => {
@@ -25,10 +28,10 @@ const Form = () => {
         setLoading(true)
 
         const objOrder = {
-            items: cart,
+            prodOrder: cart.map(prod => { return ({ id: prod.id, name: prod.name, quantity: prod.quantity, price: prod.price }) }),
             buyer: input,
-            total: totalCost(),
-            date: new Date
+            total: calcularTotal(),
+            date: new Date()        
         }
 
         const ids = cart.map(prod => prod.id)
@@ -45,10 +48,10 @@ const Form = () => {
             .then(response => {
                 response.docs.forEach(doc => {
                     const dataDoc = doc.data()
-                    const prodQuantity = cart.find(prod => prod.id === doc.id) ?.quantity
+                    const prodQuantity = cart.find(prod => prod.id === doc.id)?.quantity
 
                     if (dataDoc.stock >= prodQuantity) {
-                        batch.update(doc.ref, { stock: dataDoc.stock - prodQuantity })
+                        batch.update(doc.ref, { stock: dataDoc.stock - prodQuantity})
                     } else {
                         outOfStock.push({ id: doc.id, ...dataDoc })
                     }
@@ -74,19 +77,20 @@ const Form = () => {
     if (loading) {
         return <h1> generando orden </h1>
     }
+
+
     
     return (
         
         <form onSubmit= {handleSubmit}>
-            <div>
                 <div className='Form'>
                     <h1>Tus datos</h1>
-                    <label>Nombre: <input type='text' onChange={handleChange} name="nombre" value={input.nombre}/></label>
-                    <label>Email: <input type='text' onChange={handleChange} name="correo" value={input.correo}/></label>
-                    <label>Teléfono:<input type="number" onChange={handleChange} name="telefono" value={input.telefono}/></label>
+                    <label>Nombre: <input type='text' className="field" onChange={handleChange} name="nombre" value={input.nombre}/></label>
+                    <label>Email: <input type='text' className="field" onChange={handleChange} name="correo" value={input.correo}/></label>
+                    <label>Teléfono:<input type="number" className="field" onChange={handleChange} name="telefono" value={input.telefono}/></label>
                     <button onClick={() => createOrder()} className="ButtonCount">Finalizar compra</button>
                 </div>
-            </div>
+            
         </form>
             
     )
