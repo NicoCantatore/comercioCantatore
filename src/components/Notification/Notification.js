@@ -9,9 +9,9 @@ const Notification = ({ message, severity, otherClass = 'Message' }) => {
       right: 5,
       width: 'auto',
       height: 'auto',
-    //   backgroundColor: severity === 'success' ? 'green' : 'red',
+      backgroundColor: severity === 'success' ? 'green' : 'red',
       padding: '10px 20px 10px 20px',
-    //   color: 'white'
+    
     }
 
     if(message === '') {
