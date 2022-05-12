@@ -15,9 +15,10 @@ En la lista de libros, se ingresa a ver detalle, se selecciona la cantidad de li
 
 Video del paso a paso:
 
-[](..%5C..%5CVideos%5CCaptures%5CReact%20App%20-%20Brave%202022-05-12%2017-06-43.mp4)
+![](..%5CReact%20App%20-%20Brave%202022-05-12%2017-06-43.gif)
 
-Datos Tecnicos:
+
+******************************Datos Tecnicos:
 Se abre una carpeta components en la que se insertan las logicas y estilos para separar componentes y que sea mas facil visualizar y entender.
 
 El inicio de la web (/ (entrada) veras el saludo inicial.
@@ -88,6 +89,7 @@ continuar compra lleva hacia un form
 que nos preguntara los datos basicos para poder finalizar la compra y devolvernos un cupon con el numero de compra
 y un boton de volver a comprar que lleva a list para comenzar nuevamente.
 
+
 *form
 creo un estado con un id de compra y un setcompra para poder devolver el num de orden de compra con un return
 realizamos un if preview con loading para cortar el return principal y dejar un mje
@@ -98,9 +100,8 @@ con la funcion handlesubmit
 creo un estado input que lo leo con handlesubmit y lo seteo cpn set input..
 onchange escucha un evento del estado setinput
 cuando ejecuto finalizar compra ejecuto createorder con el evento onclik y ejecuto la funcuion handlesubmit del onsubmit del form
-creo una constante handlechange con un evento y una resevada target de react que me toma el estado del value (valor nombre tel ) y lo 
-retorna 
--------------------------------------------------------------------------------------
+creo una constante handlechange con un evento y una resevada target de react que me toma el estado del value (valor nombre tel ) y lo retorna
+***************************************
 
 Construido con 🛠️
 ReactJs
