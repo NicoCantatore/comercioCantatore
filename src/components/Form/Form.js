@@ -3,10 +3,13 @@ import { useContext, useState } from "react"
 import { getDocs, writeBatch, query, where, collection, documentId, addDoc } from 'firebase/firestore'
 import { firestoreDb } from '../service/firebase/index'
 import './Form.css';
+import { Link } from "react-router-dom";
 
 const Form = () => {
 
     const [input, setInput] = useState({nombre: '', telefono: '', correo: '' })
+
+    const [idCompra, setCompra] = useState(null)
     
     const [loading, setLoading] = useState(false)
 
@@ -65,7 +68,9 @@ const Form = () => {
                 }
             }).then(({ id }) => {
                 batch.commit()
+                const idCompra = id
                 console.log(`El id de la orden es ${id}`)
+                return setCompra(idCompra)
             }).catch(error => {
                 console.log(error)
             }).finally(() => {
@@ -75,7 +80,15 @@ const Form = () => {
     }
 
     if (loading) {
-        return <h1> generando orden </h1>
+        return <h1> generando orden... </h1>
+    }
+
+    if (idCompra) {
+        return  <>
+               <h1> Felicidades!!! </h1>
+               <h3> Tu codigo de compra es:  {idCompra} </h3>
+               <Link to = '/list'><button className='ButtonCount' >Volve y segui comprando!</button></Link>
+               </>
     }
 
 
@@ -84,15 +97,15 @@ const Form = () => {
         
         <form onSubmit= {handleSubmit}>
                 <div className='Form'>
-                    <h1>Tus datos</h1>
-                    <label>Nombre: <input type='text' className="field" onChange={handleChange} name="nombre" value={input.nombre}/></label>
-                    <label>Email: <input type='text' className="field" onChange={handleChange} name="correo" value={input.correo}/></label>
-                    <label>Teléfono:<input type="number" className="field" onChange={handleChange} name="telefono" value={input.telefono}/></label>
-                    <button onClick={() => createOrder()} className="ButtonCount">Finalizar compra</button>
+                      <h1>Tus datos</h1>
+                      <label>Nombre: <input type='text' className="field" onChange={handleChange} name="nombre" value={input.nombre}/></label>
+                      <label>Email: <input type='text' className="field" onChange={handleChange} name="correo" value={input.correo}/></label>
+                      <label>Teléfono:<input type="number" className="field" onChange={handleChange} name="telefono" value={input.telefono}/></label>
+                     <button onClick={() => createOrder()} className="ButtonCount">Finalizar compra</button>
                 </div>
             
         </form>
-            
+        
     )
 }
 

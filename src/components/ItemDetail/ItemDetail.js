@@ -20,7 +20,7 @@ const ItemDetail= ({id, name, img, category, description, price, stock }) => {
         }
 
         addItem(productObj)
-        setNotification('error', `Se agregaron ${count} ${name} correctamente`)
+        setNotification('success', `Agregaste ${count} ${name}`)
     }
 
   

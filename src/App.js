@@ -8,6 +8,7 @@ import { CartContextProvider } from './components/Context/CartContext';
 import Cart from './components/Cart/Cart';
 import {NotificationProvider} from './components/Notification/Notification'
 import Form from './components/Form/Form'
+import Enter from './components/entrada/entrada';
 
 function App() {
     
@@ -25,7 +26,7 @@ function App() {
                 
                         <Routes>
 
-                            <Route path='/' element={<ItemListContainer />} />
+                            <Route path='/' element={<Enter />} />
                             <Route path='/list' element={<ItemListContainer />} />
                             <Route path='/detail/:productId' element={<ItemDetailContainer />} />
                             <Route path='/cart' element={<Cart />} />
