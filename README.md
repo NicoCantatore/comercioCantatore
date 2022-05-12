@@ -1,5 +1,6 @@
----------- SK Reviews ---------------------
-Pagina con libros destacados del autor: Stephen King
+*SK Reviews
+
+Pagina con libros destacados del autor: Stephen King!!!
 
 Comenzando 🚀
 Para poder comenzar a visualizar proyecto..
@@ -15,10 +16,9 @@ En la lista de libros, se ingresa a ver detalle, se selecciona la cantidad de li
 
 Video del paso a paso:
 
-![React App - Brave 2022-05-12 17-06-43](https://user-images.githubusercontent.com/86130285/168162192-0b9c036c-5ae2-420f-b2e3-a451f18a34f5.gif)
 
 
-******************************Datos Tecnicos:
+Datos Tecnicos:
 Se abre una carpeta components en la que se insertan las logicas y estilos para separar componentes y que sea mas facil visualizar y entender.
 
 El inicio de la web (/ (entrada) veras el saludo inicial.
@@ -101,7 +101,7 @@ creo un estado input que lo leo con handlesubmit y lo seteo cpn set input..
 onchange escucha un evento del estado setinput
 cuando ejecuto finalizar compra ejecuto createorder con el evento onclik y ejecuto la funcuion handlesubmit del onsubmit del form
 creo una constante handlechange con un evento y una resevada target de react que me toma el estado del value (valor nombre tel ) y lo retorna
-***************************************
+
 
 Construido con 🛠️
 ReactJs
