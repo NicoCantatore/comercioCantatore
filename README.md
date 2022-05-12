@@ -15,7 +15,7 @@ En la lista de libros, se ingresa a ver detalle, se selecciona la cantidad de li
 
 Video del paso a paso:
 
-![](..%5CReact%20App%20-%20Brave%202022-05-12%2017-06-43.gif)
+![React App - Brave 2022-05-12 17-06-43](https://user-images.githubusercontent.com/86130285/168162192-0b9c036c-5ae2-420f-b2e3-a451f18a34f5.gif)
 
 
 ******************************Datos Tecnicos:
